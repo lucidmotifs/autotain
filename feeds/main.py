@@ -8,7 +8,7 @@ import feedparser
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
-    "feed", help="create new download items from rss feed", type=str)
+    "feed", help="create new download_candidates from rss feed", type=str)
 args = parser.parse_args()
 
 def main():
