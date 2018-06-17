@@ -1,1 +1,2 @@
 feedparser==5.2.1
+torrent-hound==1.6.6

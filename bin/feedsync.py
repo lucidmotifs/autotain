@@ -11,7 +11,7 @@ parser.add_argument(
     "feed", help="create new download_candidates from rss feed", type=str)
 args = parser.parse_args()
 
-def main():
+def run():
     feed = feedparser.parse(args.feed)
     for e in feed.entries:
         print(e['title'])
@@ -20,4 +20,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    run()
