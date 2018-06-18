@@ -2,7 +2,7 @@ import sys
 import argparse
 import logging
 
-from lib import torrentapi
+from pylib import torrentapi
 
 INDEX_PROVIDERS = ('tpb_api', 'rarbg')
 
