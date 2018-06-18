@@ -29,6 +29,10 @@ def run_query():
         print(sr)
 
 
+def determine_best_result(results):
+    pass
+
+
 if __name__ == '__main__':
     if args.index not in INDEX_PROVIDERS:
         log.error('%s is not a valid torrent indexer' % args.index)
