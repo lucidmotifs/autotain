@@ -2,9 +2,9 @@ import sys
 import argparse
 import logging
 
-from lib import torrenthound
+from lib import torrentapi
 
-INDEX_PROVIDERS = ('tpb', 'tpb_api', 'rarbg')
+INDEX_PROVIDERS = ('tpb_api', 'rarbg')
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
@@ -17,11 +17,11 @@ args = parser.parse_args()
 
 def run_query():
     if args.index == 'tpb':
-        query_method = torrenthound.searchPirateBay
+        query_method = torrentapi.searchPirateBay
     elif args.index == 'tpb_api':
-        query_method = torrenthound.searchPirateBayWithAPI
+        query_method = torrentapi.searchPirateBayWithAPI
     elif args.index == 'rarbg':
-        query_method = torrenthound.searchRarbg
+        query_method = torrentapi.search_rarbg
 
     search_results = query_method(args.query)
     for sr in search_results:
