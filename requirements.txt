@@ -1,2 +1,3 @@
 feedparser==5.2.1
-torrent-hound==1.6.6
+torrent-hound==1.6.6  # being deprecated, will need to copy it's requirements first
+requests==2.19.1
