@@ -14,6 +14,7 @@ parser.add_argument(
     choices=INDEX_PROVIDERS)
 args = parser.parse_args()
 
+log = logging.Logger(__name__, level=1)
 
 def run_query():
     if args.index == 'tpb':
@@ -30,6 +31,6 @@ def run_query():
 
 if __name__ == '__main__':
     if args.index not in INDEX_PROVIDERS:
-        print('%s is not a valid torrent indexer' % args.index)
+        log.error('%s is not a valid torrent indexer' % args.index)
         sys.exit(1)
     run_query()
